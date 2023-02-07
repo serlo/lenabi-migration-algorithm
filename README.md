@@ -29,7 +29,7 @@ On the top-level, a document is a JSON-object with a `type` property and some cu
     "plugin": "article",
     "state": ...
   },
-  "__meta_version": 1
+  "version": 1
 }
 ```
 
