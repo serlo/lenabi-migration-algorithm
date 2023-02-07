@@ -34,7 +34,7 @@ On the top-level, a document is a JSON-object with a `type` property and some cu
 
 ### Migration Definition
 
-```
+```js
 const migrations = {
   1: function(document) {
     // do some migrations from 1 -> 2
@@ -49,7 +49,7 @@ const migrations = {
 
 ### Running Migrations
 
-```
+```js
 function runMigration(document) {
   let version = document.__meta_version
   while (version < SerloEditor.currentVersion) {
@@ -61,6 +61,8 @@ function runMigration(document) {
 ```
 
 ### Exmaple Migrations
+
+TODO
 
 - Change field name
 - single value to array
