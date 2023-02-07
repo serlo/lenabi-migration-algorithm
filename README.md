@@ -8,7 +8,7 @@ No software is set in stone. There will always be the need to add or change feat
 
 ## Overview
 
-To ensure backwards-compatibility, the Serlo Editor will use a built-in migration algorithm. Every document has a field that defines the current version of the format. The version number is an integer starting from 1. Everytime a breaking-change is made to the format, the version increases by 1. In addition, there will be a migration function provided that takes a document from version `n - 1` and converts it to a valid file of version `n`:
+To ensure backwards-compatibility, the Serlo Editor will use a built-in migration algorithm. Every document has a field that defines the current version of the format. The version number is an integer starting from 1. Everytime a breaking-change is made to the format, the version increases by 1. In addition, there will be a migration function provided that takes a document from version `n ` and converts it to a valid file of version `n + 1`:
 
 ![grafik](https://user-images.githubusercontent.com/13507950/217203324-ca8102c3-7103-4c3a-b82e-a9d00bcb25b6.png)
 
