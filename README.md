@@ -25,7 +25,7 @@ On the top-level, a document is a JSON-object with a `type` property and some cu
 ```json
 {
   "type": "https://serlo.org/editor",
-  "__meta_version": 1,
+  "version": 1,
   "content": {
     "plugin": "article",
     "state": ...
