@@ -20,16 +20,16 @@ This section will outline a possible implementation strategy.
 
 ### Document Format and version number.
 
-On the top-level, a document is a JSON-object with a `type` property and some custom fields that may contain nested documents. The top-level object (also called plugin) will get a version tag:
+On the top-level, a document is a JSON-object with a `type` property and some custom fields that may contain nested documents. The top-level plugin will get a version tag:
 
 ```json
 {
   "type": "https://serlo.org/editor",
+  "version": 1,
   "content": {
     "plugin": "article",
     "state": ...
   },
-  "version": 1
 }
 ```
 
