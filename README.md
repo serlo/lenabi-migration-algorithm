@@ -24,10 +24,11 @@ On the top-level, a document is a JSON-object with a `type` property and some cu
 
 ```json
 {
-  "type": "article",
-  "title": "Sinus und Kosinus",
-  "content":
-    "nested subdocument ... ",
+  "type": "https://serlo.org/editor",
+  "content": {
+    "plugin": "article",
+    "state": ...
+  },
   "__meta_version": 1
 }
 ```
