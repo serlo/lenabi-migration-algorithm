@@ -52,11 +52,11 @@ const migrations = {
 
 ```js
 function runMigration(document) {
-  let version = document.__meta_version
+  let version = document.version
   while (version < SerloEditor.currentVersion) {
     document = migrations[version](document)
     version++
-    documnet.__meta_version = version
+    documnet.version = version
   }
 }
 ```
