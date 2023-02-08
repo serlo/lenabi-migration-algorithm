@@ -1,0 +1,94 @@
+3c3
+<   "version": 2,
+---
+>   "version": 3,
+86c86
+<             "plugin": "multimedia",
+---
+>             "plugin": "sidebyside",
+88c88
+<               "explanation": {
+---
+>               "left": {
+167c167
+<               "multimedia": {
+---
+>               "right": {
+187,189c187
+<               },
+<               "illustrating": true,
+<               "width": 25
+---
+>               }
+193c191
+<             "plugin": "multimedia",
+---
+>             "plugin": "sidebyside",
+195c193
+<               "explanation": {
+---
+>               "left": {
+253c251
+<               "multimedia": {
+---
+>               "right": {
+273,275c271
+<               },
+<               "illustrating": true,
+<               "width": 25
+---
+>               }
+296c292
+<                 "plugin": "multimedia",
+---
+>                 "plugin": "sidebyside",
+298c294
+<                   "explanation": {
+---
+>                   "left": {
+316c312
+<                   "multimedia": {
+---
+>                   "right": {
+336,338c332
+<                   },
+<                   "illustrating": true,
+<                   "width": 50
+---
+>                   }
+342c336
+<                 "plugin": "multimedia",
+---
+>                 "plugin": "sidebyside",
+344c338
+<                   "explanation": {
+---
+>                   "left": {
+401c395
+<                   "multimedia": {
+---
+>                   "right": {
+421,423c415
+<                   },
+<                   "illustrating": true,
+<                   "width": 50
+---
+>                   }
+427c419
+<                 "plugin": "multimedia",
+---
+>                 "plugin": "sidebyside",
+429c421
+<                   "explanation": {
+---
+>                   "left": {
+476c468
+<                   "multimedia": {
+---
+>                   "right": {
+496,498c488
+<                   },
+<                   "illustrating": true,
+<                   "width": 50
+---
+>                   }
