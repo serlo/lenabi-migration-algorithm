@@ -80,10 +80,20 @@ This repo also includes a small script that executes the mutations. If you have 
 node index.js
 ```
 
+If everything worked out, you can see this output:
+
+```
+Document migrated from version 1 to version 2
+Document migrated from version 2 to version 3
+Document migrated from version 3 to version 4
+```
+
+You can see the files `document_v1.json` to `document_v4.json`. For demonstrating, the repo also contains the diffs of the files.
+
 ## Limitations
 
-To make this system work, we have to make sure that all changes are automatically convertable without manual intervention, e.g. by choosing a good default value for new fields.
+In order to ensure that the system operates smoothly, it is important to make all changes migratable without manual intervention. This can be achieved by selecting appropriate default values for new fields.
 
-We don't want to run migrations on the database, as this could break documents. Documents are only updated after a new edit.
+To minimize the risk of breaking existing documents, migrations should not be performed directly on the database. Instead, documents should only be updated after a new edit is made.
 
-This system is very closes with h5p migration strategy, which is quite handy.
+The design of this system closely mirrors the [h5p migration](https://h5p.org/documentation/developers/content-upgrade) strategy, which provides a convenient framework to follow.
