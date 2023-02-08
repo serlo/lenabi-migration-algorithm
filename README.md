@@ -41,10 +41,12 @@ Example 1:
 
 Example 2:
 
-https://github.com/serlo/lenabi-migration-algorithm/blob/49599f2d33d087200b9006b3d45e61d610b13e32/document_v1.json contains a complete example of an actual serlo editor state.
+The file [document_v1.json](https://github.com/serlo/lenabi-migration-algorithm/blob/49599f2d33d087200b9006b3d45e61d610b13e32/document_v1.json) contains a full example of an Serlo Editor document that implements the proposed version management scheme.
 
 
-### Migration Definition
+### Migrations
+
+Migrations itself consist of an object with keys and function.
 
 ```js
 const migrations = {
