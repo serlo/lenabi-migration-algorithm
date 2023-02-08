@@ -54,6 +54,10 @@
                     ]
                   }
                 ]
+              },
+              "metadata": {
+                "author": null,
+                "license": null
               }
             }
           },
@@ -79,9 +83,9 @@
             ]
           },
           {
-            "plugin": "multimedia",
+            "plugin": "sidebyside",
             "state": {
-              "explanation": {
+              "left": {
                 "plugin": "rows",
                 "state": [
                   {
@@ -160,7 +164,7 @@
                   }
                 ]
               },
-              "multimedia": {
+              "right": {
                 "plugin": "image",
                 "state": {
                   "src": "https://assets.serlo.org/5e74af116eaa1_16c489e9cb17474d06dfbfd782a381827f225310.jpg",
@@ -174,17 +178,19 @@
                         ]
                       }
                     ]
+                  },
+                  "metadata": {
+                    "author": null,
+                    "license": null
                   }
                 }
-              },
-              "illustrating": true,
-              "width": 25
+              }
             }
           },
           {
-            "plugin": "multimedia",
+            "plugin": "sidebyside",
             "state": {
-              "explanation": {
+              "left": {
                 "plugin": "rows",
                 "state": [
                   {
@@ -242,7 +248,7 @@
                   }
                 ]
               },
-              "multimedia": {
+              "right": {
                 "plugin": "image",
                 "state": {
                   "src": "https://assets.serlo.org/5e74ae98644de_c2f3cb11bb2343e0c49ce9743fdf81d596be5db4.png",
@@ -256,11 +262,13 @@
                         ]
                       }
                     ]
+                  },
+                  "metadata": {
+                    "author": null,
+                    "license": null
                   }
                 }
-              },
-              "illustrating": true,
-              "width": 25
+              }
             }
           },
           {
@@ -281,9 +289,9 @@
                 ]
               },
               {
-                "plugin": "multimedia",
+                "plugin": "sidebyside",
                 "state": {
-                  "explanation": {
+                  "left": {
                     "plugin": "rows",
                     "state": [
                       {
@@ -301,7 +309,7 @@
                       }
                     ]
                   },
-                  "multimedia": {
+                  "right": {
                     "plugin": "image",
                     "state": {
                       "src": "https://assets.serlo.org/5e74b2fe31f3b_2bb92fb21bad18f2381deaed2ef63b16457d248b.png",
@@ -315,17 +323,19 @@
                             ]
                           }
                         ]
+                      },
+                      "metadata": {
+                        "author": null,
+                        "license": null
                       }
                     }
-                  },
-                  "illustrating": true,
-                  "width": 50
+                  }
                 }
               },
               {
-                "plugin": "multimedia",
+                "plugin": "sidebyside",
                 "state": {
-                  "explanation": {
+                  "left": {
                     "plugin": "rows",
                     "state": [
                       {
@@ -382,7 +392,7 @@
                       }
                     ]
                   },
-                  "multimedia": {
+                  "right": {
                     "plugin": "image",
                     "state": {
                       "src": "https://assets.serlo.org/5e74bdd2b7c7e_fb926e0efe199110350aba116f8e8738bb8dade0.png",
@@ -396,17 +406,19 @@
                             ]
                           }
                         ]
+                      },
+                      "metadata": {
+                        "author": null,
+                        "license": null
                       }
                     }
-                  },
-                  "illustrating": true,
-                  "width": 50
+                  }
                 }
               },
               {
-                "plugin": "multimedia",
+                "plugin": "sidebyside",
                 "state": {
-                  "explanation": {
+                  "left": {
                     "plugin": "rows",
                     "state": [
                       {
@@ -453,7 +465,7 @@
                       }
                     ]
                   },
-                  "multimedia": {
+                  "right": {
                     "plugin": "image",
                     "state": {
                       "src": "https://assets.serlo.org/6076911831924_55eaf1857ee46a4ed53b697c659164660b3cec86.jpg",
@@ -467,11 +479,13 @@
                             ]
                           }
                         ]
+                      },
+                      "metadata": {
+                        "author": null,
+                        "license": null
                       }
                     }
-                  },
-                  "illustrating": true,
-                  "width": 50
+                  }
                 }
               }
             ]
