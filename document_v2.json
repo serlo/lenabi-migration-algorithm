@@ -1,6 +1,6 @@
 {
   "type": "https://serlo.org/editor",
-  "version": 1,
+  "version": 2,
   "content": {
     "plugin": "article",
     "state": {
@@ -49,7 +49,9 @@
                 "state": [
                   {
                     "type": "p",
-                    "children": [{}]
+                    "children": [
+                      {}
+                    ]
                   }
                 ]
               }
@@ -167,7 +169,9 @@
                     "state": [
                       {
                         "type": "p",
-                        "children": [{}]
+                        "children": [
+                          {}
+                        ]
                       }
                     ]
                   }
@@ -247,7 +251,9 @@
                     "state": [
                       {
                         "type": "p",
-                        "children": [{}]
+                        "children": [
+                          {}
+                        ]
                       }
                     ]
                   }
@@ -304,7 +310,9 @@
                         "state": [
                           {
                             "type": "p",
-                            "children": [{}]
+                            "children": [
+                              {}
+                            ]
                           }
                         ]
                       }
@@ -383,7 +391,9 @@
                         "state": [
                           {
                             "type": "p",
-                            "children": [{}]
+                            "children": [
+                              {}
+                            ]
                           }
                         ]
                       }
@@ -452,7 +462,9 @@
                         "state": [
                           {
                             "type": "p",
-                            "children": [{}]
+                            "children": [
+                              {}
+                            ]
                           }
                         ]
                       }
