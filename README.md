@@ -4,23 +4,29 @@
 
 ## Introduction
 
-No software is set in stone. There will always be the need to add or change features. But doing these changes shouldn't make existing content inacessible. As a fairly young project, the Serlo Editor will undergo a lot of developments in the foreseeable future, so we have to prepare for changes in the format of the content we store.
+No software is set in stone, and there will always be a need to add or change features. However, these changes should not render existing content inaccessible. As a relatively young project, the Serlo Editor is poised for significant development in the near future, so we must be prepared for changes in the format of the stored content.
 
 ## Overview
 
-To ensure backwards-compatibility, the Serlo Editor will use a built-in migration algorithm. Every document has a field that defines the current version of the format. The version number is an integer starting from 1. Everytime a change is made to the format, the version increases by 1. In addition, there will be a migration function provided that takes a document from version `n ` and converts it to a valid document of version `n + 1`:
+To maintain backward compatibility, the Serlo Editor will employ a built-in migration algorithm. Each document contains a field that defines its current format version, represented by an integer starting from 1. Whenever a format change occurs, the version number is incremented by 1. Moreover, a migration function will be supplied that converts a document from version `n` to a valid document of version `n + 1`.
 
 ![grafik](https://user-images.githubusercontent.com/13507950/217207637-208e27cf-e7c5-4ee9-ac12-dc7055ce9743.png)
 
-This way, we can ensure that the latest version of the editor is read all documents created with the same or earlier versions.
+By employing this approach, we can guarantee that the latest version of the editor will be able to read all documents created using the same or earlier versions of the format. This way, we can ensure that the existing content remains accessible even as the software evolves and improves over time. Additionally, this approach also makes it easier to update to the latest version of the editor without having to worry about compatibility issues.
 
 ## Implementation
 
-This section will outline a possible implementation strategy.
+This section outlines a proposed implementation strategy.
 
-### Document Format and version number.
+### Document Format and version number
 
-On the top-level, a document is a JSON-object with a `type` property and some custom fields that may contain nested documents. The top-level plugin will get a version tag:
+At the top level, a document is encapsulated in a JSON object with three properties:
+
+- `type`: This property identifies the document as one created by the Serlo Editor and has a fixed string value of `"https://serlo.org/editor"`.
+- `version`: An integer, as described previously.
+- `content`: This property contains a plugin that is compatible with the Serlo Editor. Each plugin has a type and a state, where the state may contain nested plugins.
+
+Example 1:
 
 ```json
 {
@@ -29,9 +35,14 @@ On the top-level, a document is a JSON-object with a `type` property and some cu
   "content": {
     "plugin": "article",
     "state": ...
-  },
+  }
 }
 ```
+
+Example 2:
+
+... contains a bigger example of an actual serlo editor state.
+
 
 ### Migration Definition
 
