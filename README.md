@@ -26,7 +26,7 @@ At the top level, a document is encapsulated in a JSON object with three propert
 - `version`: An integer, as described previously.
 - `content`: This property contains a plugin that is compatible with the Serlo Editor. Each plugin has a type and a state, where the state may contain nested plugins.
 
-Example 1:
+This is a minimal example for such a document:
 
 ```json
 {
@@ -39,12 +39,12 @@ Example 1:
 }
 ```
 
-Example 2:
-
 The file [document_v1.json](https://github.com/serlo/lenabi-migration-algorithm/blob/49599f2d33d087200b9006b3d45e61d610b13e32/document_v1.json) contains a full example of an Serlo Editor document that implements the proposed version management scheme.
 
 
 ### Migrations
+
+TODO form here
 
 Migrations itself consist of an object with keys and function.
 
