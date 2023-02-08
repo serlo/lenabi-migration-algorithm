@@ -70,7 +70,7 @@ This repo showcases some examples of potential migrations and their implementati
 - `v2 -> v3`: The multimedia plugin is made more generic and renamed to "sidebyside". The "illustrating" and "width" properties are removed and "explanation" and "multimedia" are renamed to "left" and "right".
 - `v3 -> v4`:  A new property "caption" is added to the state of the sidebyside plugin. The default value of the caption is set to "".
 
-You can refer to the file for more details on how these features are implemented.
+You can refer to [migrations.js](https://github.com/serlo/lenabi-migration-algorithm/blob/main/migrations.js) for more details on how these features are implemented.
 
 ### Running Migrations
 
@@ -92,7 +92,7 @@ You can see the files `document_v1.json` to `document_v4.json`. For demonstratin
 
 ## Limitations
 
-In order to ensure that the system operates smoothly, it is important to make all changes migratable without manual intervention. This can be achieved by selecting appropriate default values for new fields.
+In order to ensure that the system operates smoothly, it is important to make all changes convertible without manual intervention. This can be achieved by selecting appropriate default values for new fields.
 
 To minimize the risk of breaking existing documents, migrations should not be performed directly on the database. Instead, documents should only be updated after a new edit is made.
 
