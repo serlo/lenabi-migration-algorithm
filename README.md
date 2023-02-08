@@ -41,7 +41,7 @@ Example 1:
 
 Example 2:
 
-... contains a bigger example of an actual serlo editor state.
+https://github.com/serlo/lenabi-migration-algorithm/blob/49599f2d33d087200b9006b3d45e61d610b13e32/document_v1.json contains a complete example of an actual serlo editor state.
 
 
 ### Migration Definition
