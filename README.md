@@ -49,7 +49,7 @@ For every version except the current one, the file [migrations.js](https://githu
 ```js
 //migrations.js
 
-export const migrations = {
+const migrations = {
   1: function(content) {
     // transform content from version 1 to version 2
     return content
@@ -60,29 +60,24 @@ export const migrations = {
   }
   // ... and more migrations
 }
+
+module.exports = { migrations }
 ```
 
-This repo demonstrates some examples of possible migrations and there implementation:
+This repo showcases some examples of potential migrations and their implementation (Note that the examples only showcase the possibilities of migrations and do not represent features that are planned to be implemented):
 
-- v1 -> v2: The image-plugin gets a new property `metadata` with a string about possible meta data like author or special licenses
-- v2 -> v3: rename plugin "multimedia" to "sidebyside" to allow better naming convention
-- v3 -> v4: To avoid duplication, set title to empty if it's the same as the link in the sources
+- `v1 -> v2`: A new "metadata" property is added to the state of the image plugin. It is given a default value of `{author: null, license: null}` to indicate the absence of any special metadata.
+- `v2 -> v3`: The multimedia plugin is made more generic and renamed to "sidebyside". The "illustrating" and "width" properties are removed and "explanation" and "multimedia" are renamed to "left" and "right".
+- `v3 -> v4`:  A new property "caption" is added to the state of the sidebyside plugin. The default value of the caption is set to "".
+
+You can refer to the file for more details on how these features are implemented.
 
 ### Running Migrations
 
-TODO
+This repo also includes a small script that executes the mutations. If you have node.js installed, you can run it with following command:
 
-To test the migrations itself, this repo includes a small runner script that compares the migrations with the output files.
-
-```js
-function runMigration(document) {
-  let version = document.version
-  while (version < SerloEditor.currentVersion) {
-    document = migrations[version](document)
-    version++
-    documnet.version = version
-  }
-}
+```sh
+node index.js
 ```
 
 ## Limitations
