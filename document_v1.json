@@ -1,0 +1,747 @@
+{
+  "type": "https://serlo.org/editor",
+  "version": 1,
+  "content": {
+    "plugin": "article",
+    "state": {
+      "introduction": {
+        "plugin": "articleIntroduction",
+        "state": {
+          "explanation": {
+            "plugin": "text",
+            "state": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Salze haben in Wasser eine sehr hohe "
+                  },
+                  {
+                    "type": "a",
+                    "href": "/25402",
+                    "children": [
+                      {
+                        "text": "Löslichkeit"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ". Du kennst das vielleicht, wenn du schon einmal eine Suppe gesalzen hast, das Salz löst sich in der Suppe und liegt nicht körnig vor. "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Im Folgenden wollen wir uns anschauen, wie genau der Lösungsvorgang von Salzen in Wasser aussieht."
+                  }
+                ]
+              }
+            ]
+          },
+          "multimedia": {
+            "plugin": "image",
+            "state": {
+              "src": "",
+              "caption": {
+                "plugin": "text",
+                "state": [
+                  {
+                    "type": "p",
+                    "children": [
+                      {
+
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "illustrating": true,
+          "width": 50
+        }
+      },
+      "content": {
+        "plugin": "rows",
+        "state": [
+          {
+            "plugin": "text",
+            "state": [
+              {
+                "type": "h",
+                "level": 2,
+                "children": [
+                  {
+                    "text": "Die beteiligten Teilchen"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "plugin": "multimedia",
+            "state": {
+              "explanation": {
+                "plugin": "rows",
+                "state": [
+                  {
+                    "plugin": "text",
+                    "state": [
+                      {
+                        "type": "p",
+                        "children": [
+                          {
+                            "text": "Wassermoleküle",
+                            "strong": true
+                          },
+                          {
+                            "text": " sind "
+                          },
+                          {
+                            "type": "a",
+                            "href": "/80877",
+                            "children": [
+                              {
+                                "text": "Dipole"
+                              }
+                            ]
+                          },
+                          {
+                            "text": ", das heißt, sie besitzen positive und negative Partialladungen ("
+                          },
+                          {
+                            "type": "math",
+                            "src": "\\delta",
+                            "inline": true,
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ]
+                          },
+                          {
+                            "text": "). Diese entstehen durch die unterschiedlichen "
+                          },
+                          {
+                            "type": "a",
+                            "href": "/152309",
+                            "children": [
+                              {
+                                "text": "Elektronegativitäten"
+                              }
+                            ]
+                          },
+                          {
+                            "text": " der "
+                          },
+                          {
+                            "type": "a",
+                            "href": "/154653",
+                            "children": [
+                              {
+                                "text": "Atome"
+                              }
+                            ]
+                          },
+                          {
+                            "text": ". "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "p",
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "multimedia": {
+                "plugin": "image",
+                "state": {
+                  "src": "https://assets.serlo.org/5e74af116eaa1_16c489e9cb17474d06dfbfd782a381827f225310.jpg",
+                  "caption": {
+                    "plugin": "text",
+                    "state": [
+                      {
+                        "type": "p",
+                        "children": [
+                          {
+
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "illustrating": true,
+              "width": 25
+            }
+          },
+          {
+            "plugin": "multimedia",
+            "state": {
+              "explanation": {
+                "plugin": "rows",
+                "state": [
+                  {
+                    "plugin": "text",
+                    "state": [
+                      {
+                        "type": "p",
+                        "children": [
+                          {
+                            "text": "Salze",
+                            "strong": true
+                          },
+                          {
+                            "text": " bestehen aus "
+                          },
+                          {
+                            "type": "a",
+                            "href": "/32005",
+                            "children": [
+                              {
+                                "text": "Ionen"
+                              }
+                            ]
+                          },
+                          {
+                            "text": ", welche in einem Ionengitter angeordnet sind. Das heißt, sie setzen sich aus positiv geladenen "
+                          },
+                          {
+                            "type": "a",
+                            "href": "/32005",
+                            "children": [
+                              {
+                                "text": "Kationen"
+                              }
+                            ]
+                          },
+                          {
+                            "text": " und negativ geladenen "
+                          },
+                          {
+                            "type": "a",
+                            "href": "/32005",
+                            "children": [
+                              {
+                                "text": "Anionen"
+                              }
+                            ]
+                          },
+                          {
+                            "text": " zusammen."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "multimedia": {
+                "plugin": "image",
+                "state": {
+                  "src": "https://assets.serlo.org/5e74ae98644de_c2f3cb11bb2343e0c49ce9743fdf81d596be5db4.png",
+                  "caption": {
+                    "plugin": "text",
+                    "state": [
+                      {
+                        "type": "p",
+                        "children": [
+                          {
+
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "illustrating": true,
+              "width": 25
+            }
+          },
+          {
+            "plugin": "rows",
+            "state": [
+              {
+                "plugin": "text",
+                "state": [
+                  {
+                    "type": "h",
+                    "level": 2,
+                    "children": [
+                      {
+                        "text": "Der Lösungsvorgang"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "plugin": "multimedia",
+                "state": {
+                  "explanation": {
+                    "plugin": "rows",
+                    "state": [
+                      {
+                        "plugin": "text",
+                        "state": [
+                          {
+                            "type": "p",
+                            "children": [
+                              {
+                                "text": "Gibt man Salzkristalle in Wasser, richten sich die Wassermoleküle so aus, dass positive Teilladungen an Anionen haften und negative Teilladungen an Kationen."
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "multimedia": {
+                    "plugin": "image",
+                    "state": {
+                      "src": "https://assets.serlo.org/5e74b2fe31f3b_2bb92fb21bad18f2381deaed2ef63b16457d248b.png",
+                      "caption": {
+                        "plugin": "text",
+                        "state": [
+                          {
+                            "type": "p",
+                            "children": [
+                              {
+
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "illustrating": true,
+                  "width": 50
+                }
+              },
+              {
+                "plugin": "multimedia",
+                "state": {
+                  "explanation": {
+                    "plugin": "rows",
+                    "state": [
+                      {
+                        "plugin": "text",
+                        "state": [
+                          {
+                            "type": "p",
+                            "children": [
+                              {
+                                "text": "Durch die "
+                              },
+                              {
+                                "type": "a",
+                                "href": "/155793",
+                                "children": [
+                                  {
+                                    "text": "Wechselwirkungen"
+                                  }
+                                ]
+                              },
+                              {
+                                "text": " zwischen den Wassermolekülen und den Ionen, werden die Ionen langsam aus dem Gitter gezogen."
+                              }
+                            ]
+                          },
+                          {
+                            "type": "p",
+                            "children": [
+                              {
+                                "text": "Dafür muss die "
+                              },
+                              {
+                                "text": "Bindungsenergie",
+                                "strong": true
+                              },
+                              {
+                                "text": " zwischen den Ionen überwunden werden. Diese Energie heißt auch "
+                              },
+                              {
+                                "type": "a",
+                                "href": "/155753",
+                                "children": [
+                                  {
+                                    "text": "Gitterenergie"
+                                  }
+                                ]
+                              },
+                              {
+                                "text": ". "
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "multimedia": {
+                    "plugin": "image",
+                    "state": {
+                      "src": "https://assets.serlo.org/5e74bdd2b7c7e_fb926e0efe199110350aba116f8e8738bb8dade0.png",
+                      "caption": {
+                        "plugin": "text",
+                        "state": [
+                          {
+                            "type": "p",
+                            "children": [
+                              {
+
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "illustrating": true,
+                  "width": 50
+                }
+              },
+              {
+                "plugin": "multimedia",
+                "state": {
+                  "explanation": {
+                    "plugin": "rows",
+                    "state": [
+                      {
+                        "plugin": "text",
+                        "state": [
+                          {
+                            "type": "p",
+                            "children": [
+                              {
+                                "text": "Zuletzt werden die gelösten Ionen von Wassermolekülen umgeben. Das nennt man die "
+                              },
+                              {
+                                "text": "Hydrathülle",
+                                "strong": true
+                              },
+                              {
+                                "text": ". "
+                              }
+                            ]
+                          },
+                          {
+                            "type": "p",
+                            "children": [
+                              {
+                                "text": "Diesen Schritt nennt man auch "
+                              },
+                              {
+                                "text": "Hydratation.",
+                                "strong": true
+                              },
+                              {
+                                "text": " Hier wird Energie frei. Diese Energie heißt "
+                              },
+                              {
+                                "text": "Hydrationsenergie",
+                                "strong": true
+                              },
+                              {
+                                "text": "."
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "multimedia": {
+                    "plugin": "image",
+                    "state": {
+                      "src": "https://assets.serlo.org/6076911831924_55eaf1857ee46a4ed53b697c659164660b3cec86.jpg",
+                      "caption": {
+                        "plugin": "text",
+                        "state": [
+                          {
+                            "type": "p",
+                            "children": [
+                              {
+
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "illustrating": true,
+                  "width": 50
+                }
+              }
+            ]
+          },
+          {
+            "plugin": "text",
+            "state": [
+              {
+                "type": "h",
+                "level": 2,
+                "children": [
+                  {
+                    "text": "Bedeutung der Energiebeträge"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "plugin": "text",
+            "state": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Mithilfe der Hydrationsenergie und der Gitterenergie kann berechnet werden, ob beim Lösungsvorgang "
+                  },
+                  {
+                    "type": "a",
+                    "href": "/25882",
+                    "children": [
+                      {
+                        "text": "Energie frei wird, oder ob Energie aufgenommen"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " wird."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Wird Energie frei, spricht man von einer "
+                  },
+                  {
+                    "text": "exothermen",
+                    "strong": true
+                  },
+                  {
+                    "text": " Reaktion. Das Reaktionsgemisch erwärmt sich."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Wird Energie aufgenommen, spricht man von einer "
+                  },
+                  {
+                    "text": "endothermen",
+                    "strong": true
+                  },
+                  {
+                    "text": " Reaktion. Das Reaktionsgemisch kühlt ab."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Passiert nichts von beidem, bleibt die Temperatur gleich."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "plugin": "text",
+            "state": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Um festzustellen, ob die Reaktion endotherm oder exotherm abläuft, wird der "
+                  },
+                  {
+                    "type": "a",
+                    "href": "/1643",
+                    "children": [
+                      {
+                        "text": "Betrag"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " der "
+                  },
+                  {
+                    "text": "Gitterenergie",
+                    "strong": true
+                  },
+                  {
+                    "text": " vom Betrag der "
+                  },
+                  {
+                    "text": "Hydratationsenergie",
+                    "strong": true
+                  },
+                  {
+                    "text": " abgezogen."
+                  }
+                ]
+              },
+              {
+                "type": "math",
+                "src": "Hydratationsenergie\\ -\\ Gitterenergie\\ <\\ 0",
+                "inline": false,
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ist das "
+                  },
+                  {
+                    "text": "Ergebnis negativ",
+                    "strong": true
+                  },
+                  {
+                    "text": ", wird Energie aufgenommen, die Reaktion ist "
+                  },
+                  {
+                    "text": "endotherm",
+                    "strong": true
+                  },
+                  {
+                    "text": ", die Umgebung kühlt ab."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ", die Umgebung kühlt ab.﻿"
+                  }
+                ]
+              },
+              {
+                "type": "math",
+                "src": "Hydratationsenergie\\ -\\ Gitterenergie\\ >\\ 0\\ ",
+                "inline": false,
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ist das "
+                  },
+                  {
+                    "text": "Ergebnis positiv",
+                    "strong": true
+                  },
+                  {
+                    "text": ", wird Energie abgegeben, die Reaktion ist "
+                  },
+                  {
+                    "text": "exotherm",
+                    "strong": true
+                  },
+                  {
+                    "text": ", die Umgebung wärmt sich auf."
+                  }
+                ]
+              },
+              {
+                "type": "math",
+                "src": "Hydratationsenergie\\ -\\ Gitterenergie\\ =\\ 0",
+                "inline": false,
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ist das "
+                  },
+                  {
+                    "text": "Ergebnis Null",
+                    "strong": true
+                  },
+                  {
+                    "text": ", wird Energie weder aufgenommen noch abgegeben. Die Reaktion "
+                  },
+                  {
+                    "text": "ändert die Temperatur nicht",
+                    "strong": true
+                  },
+                  {
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "exercises": [
+
+      ],
+      "exerciseFolder": {
+        "id": "",
+        "title": ""
+      },
+      "relatedContent": {
+        "articles": [
+
+        ],
+        "courses": [
+
+        ],
+        "videos": [
+
+        ]
+      },
+      "sources": [
+        {
+          "href": "https://de.wikipedia.org/wiki/Hydratation",
+          "title": "https://de.wikipedia.org/wiki/Hydratation"
+        },
+        {
+          "href": "https://de.wikipedia.org/wiki/L%C3%B6sungsenthalpie",
+          "title": "https://de.wikipedia.org/wiki/L%C3%B6sungsenthalpie"
+        },
+        {
+          "href": "https://www.chemieunterricht.de/dc2/grundsch/versuche/gs-v-053.htm",
+          "title": "https://www.chemieunterricht.de/dc2/grundsch/versuche/gs-v-053.htm"
+        }
+      ]
+    }
+  }
+}
