@@ -44,7 +44,7 @@ The file [document_v1.json](https://github.com/serlo/lenabi-migration-algorithm/
 
 ### Migrations
 
-For every version except the current one, the file `migrations.js` defines a function that transforms the content of a document from that version to the next version. The basic structure is as follows:
+For every version except the current one, the file [migrations.js](https://github.com/serlo/lenabi-migration-algorithm/blob/main/migrations.js) defines a function that transforms the content of a document from that version to the next version. The basic structure is as follows:
 
 ```js
 //migrations.js
@@ -62,11 +62,11 @@ export const migrations = {
 }
 ```
 
-This repo show some examples of possible migrations and there implementations:
+This repo demonstrates some examples of possible migrations and there implementation:
 
-- v1 -> v2: 
-- v2 -> v3: 
-- v3 -> v4: 
+- v1 -> v2: The image-plugin gets a new property `metadata` with a string about possible meta data like author or special licenses
+- v2 -> v3: rename plugin "multimedia" to "sidebyside" to allow better naming convention
+- v3 -> v4: To avoid duplication, set title to empty if it's the same as the link in the sources
 
 ### Running Migrations
 
