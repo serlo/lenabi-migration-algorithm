@@ -39,29 +39,40 @@ This is a minimal example for such a document:
 }
 ```
 
-The file [document_v1.json](https://github.com/serlo/lenabi-migration-algorithm/blob/49599f2d33d087200b9006b3d45e61d610b13e32/document_v1.json) contains a full example of an Serlo Editor document that implements the proposed version management scheme.
+The file [document_v1.json](https://github.com/serlo/lenabi-migration-algorithm/blob/49599f2d33d087200b9006b3d45e61d610b13e32/document_v1.json) contains a full example of a Serlo Editor document that implements the proposed version management scheme.
 
 
 ### Migrations
 
-TODO form here
-
-Migrations itself consist of an object with keys and function.
+For every version except the current one, the file `migrations.js` defines a function that transforms the content of a document from that version to the next version. The basic structure is as follows:
 
 ```js
-const migrations = {
-  1: function(document) {
-    // do some migrations from 1 -> 2
-    return document
+//migrations.js
+
+export const migrations = {
+  1: function(content) {
+    // transform content from version 1 to version 2
+    return content
   },
-  2: function(document) {
-    // do some migrations from 2 -> 3
-    return document
+  2: function(content) {
+    // transform content from version 2 to version 3
+    return content
   }
+  // ... and more migrations
 }
 ```
 
+This repo show some examples of possible migrations and there implementations:
+
+- v1 -> v2: 
+- v2 -> v3: 
+- v3 -> v4: 
+
 ### Running Migrations
+
+TODO
+
+To test the migrations itself, this repo includes a small runner script that compares the migrations with the output files.
 
 ```js
 function runMigration(document) {
@@ -74,16 +85,7 @@ function runMigration(document) {
 }
 ```
 
-### Exmaple Migrations
-
-TODO
-
-- Change field name
-- single value to array
-- add new property
-- ...
-
-## Notes
+## Limitations
 
 To make this system work, we have to make sure that all changes are automatically convertable without manual intervention, e.g. by choosing a good default value for new fields.
 
