@@ -10,7 +10,7 @@ No software is set in stone, and there will always be a need to add or change fe
 
 To maintain backward compatibility, the Serlo Editor will employ a built-in migration algorithm. Each document contains a field that defines its current format version, represented by an integer starting from 1. Whenever a format change occurs, the version number is incremented by 1. Moreover, a migration function will be supplied that converts a document from version `n` to a valid document of version `n + 1`.
 
-![grafik](https://user-images.githubusercontent.com/13507950/217207637-208e27cf-e7c5-4ee9-ac12-dc7055ce9743.png)
+![grafik](https://user-images.githubusercontent.com/13507950/217872727-9c725bb5-b45e-402e-b1de-63a1bff5b30f.png)
 
 By employing this approach, we can guarantee that the latest version of the editor will be able to read all documents created using the same or earlier versions of the format. This way, we can ensure that the existing content remains accessible even as the software evolves and improves over time. Additionally, this approach also makes it easier to update to the latest version of the editor without having to worry about compatibility issues.
 
