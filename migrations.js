@@ -1,22 +1,3 @@
-function matchPlugin(tree, pluginName, applyChange) {
-  if (tree == null || typeof tree !== 'object') {
-    return tree
-  } else if (Array.isArray(tree)) {
-    return tree.map((element) => matchPlugin(element, pluginName, applyChange))
-  } else if (tree.plugin === pluginName) {
-    // For the prototype we omit the case that transformations might be also
-    // necessary to apply on nested elements
-    return applyChange(tree)
-  } else {
-    return Object.fromEntries(
-      Object.entries(tree).map(([key, value]) => [
-        key,
-        matchPlugin(value, pluginName, applyChange),
-      ])
-    )
-  }
-}
-
 const migrations = {
   // Example 1: Add metadata property to image
   1: (content) =>
@@ -51,6 +32,25 @@ function applyMigrations({ document, targetVersion = getCurrentVersion() }) {
   }
 
   return document
+}
+
+function matchPlugin(tree, pluginName, applyChange) {
+  if (tree == null || typeof tree !== 'object') {
+    return tree
+  } else if (Array.isArray(tree)) {
+    return tree.map((element) => matchPlugin(element, pluginName, applyChange))
+  } else if (tree.plugin === pluginName) {
+    // For the prototype we omit the case that transformations might be also
+    // necessary to apply on nested elements
+    return applyChange(tree)
+  } else {
+    return Object.fromEntries(
+      Object.entries(tree).map(([key, value]) => [
+        key,
+        matchPlugin(value, pluginName, applyChange),
+      ])
+    )
+  }
 }
 
 function getCurrentVersion() {
