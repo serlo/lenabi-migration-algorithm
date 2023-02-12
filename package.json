@@ -10,9 +10,11 @@
   "scripts": {
     "format": "prettier -w .",
     "run:migrations": "node index.js",
-    "start": "yarn run:migrations"
+    "start": "yarn run:migrations",
+    "test": "jest"
   },
   "devDependencies": {
+    "jest": "^29.4.2",
     "prettier": "^2.8.4"
   },
   "packageManager": "yarn@3.4.1"
