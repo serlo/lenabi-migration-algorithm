@@ -7,6 +7,9 @@
   "author": "Serlo Education e.V.",
   "license": "Apache-2.0",
   "private": true,
+  "scripts": {
+    "format": "prettier -w ."
+  },
   "devDependencies": {
     "prettier": "^2.8.4"
   },

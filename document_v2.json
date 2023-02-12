@@ -49,9 +49,7 @@
                 "state": [
                   {
                     "type": "p",
-                    "children": [
-                      {}
-                    ]
+                    "children": [{}]
                   }
                 ]
               },
@@ -173,9 +171,7 @@
                     "state": [
                       {
                         "type": "p",
-                        "children": [
-                          {}
-                        ]
+                        "children": [{}]
                       }
                     ]
                   },
@@ -259,9 +255,7 @@
                     "state": [
                       {
                         "type": "p",
-                        "children": [
-                          {}
-                        ]
+                        "children": [{}]
                       }
                     ]
                   },
@@ -322,9 +316,7 @@
                         "state": [
                           {
                             "type": "p",
-                            "children": [
-                              {}
-                            ]
+                            "children": [{}]
                           }
                         ]
                       },
@@ -407,9 +399,7 @@
                         "state": [
                           {
                             "type": "p",
-                            "children": [
-                              {}
-                            ]
+                            "children": [{}]
                           }
                         ]
                       },
@@ -482,9 +472,7 @@
                         "state": [
                           {
                             "type": "p",
-                            "children": [
-                              {}
-                            ]
+                            "children": [{}]
                           }
                         ]
                       },
