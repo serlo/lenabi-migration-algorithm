@@ -91,7 +91,7 @@ const migrations = {
 ```
 
 Those functions can be used to migrate a document `document` from its current
-version to `targetVersion` by appling the necessarymigrations in sequence:
+version to `targetVersion` by applying the necessary migrations in sequence:
 
 ```js
 function applyMigrations({ document, targetVersion = getCurrentVersion() }) {
@@ -107,7 +107,7 @@ function applyMigrations({ document, targetVersion = getCurrentVersion() }) {
 }
 ```
 
-This repo showcases some examples of potential migrations and their
+This repository showcases some examples of potential migrations and their
 implementation (Note that the examples only showcase the possibilities of
 migrations and do not represent features that are planned to be implemented):
 
@@ -127,12 +127,12 @@ for more details on how these features are implemented.
 ### Running tests / examples
 
 The file [`migrations.test.js`](./migrations.test.js) showcases small examples
-for the above migartions as well as how the migrations can be applied in
+for the above migrations as well as how the migrations can be applied in
 sequence in two cases. You can run the tests with `yarn test`.
 
 ### Running Migrations
 
-This repo also includes a small script that executes the mutations on the
+This repository also includes a small script that executes the mutations on the
 document `document_v1.json`. If you have node.js installed, you can run it with
 following command (or directly with `yarn run:migrations`):
 
@@ -149,10 +149,10 @@ Document migrated from version 3 to version 4
 ```
 
 You can see the result of the migrations in the files `document_v2.json` to
-`document_v4.json`. For demonstrating, the repo also contains the diffs of the
+`document_v4.json`. For demonstrating, the repository also contains the diffs of the
 files.
 
-## Comparision to the migration algorithm of H5P
+## Comparison to the migration algorithm of H5P
 
 The algorithm specified in this document is compatible to the
 [migration algorithm of H5P](https://h5p.org/documentation/developers/content-upgrade).
@@ -181,7 +181,7 @@ Our implementation has some advantages:
   migration algorithm cannot be used.
 - We can add multiple migration steps in one update of the editor while for H5P
   all migrations in a version update need to be concatenated.
-- Our migration algorithm is slightly simplier to implement.
+- Our migration algorithm is slightly simpler to implement.
 - Our migration algorithm can be easily mapped to the H5P algorithm and thus be
   used in case we want to export our Content in the H5P file format.
 
