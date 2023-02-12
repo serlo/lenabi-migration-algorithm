@@ -2,7 +2,8 @@ const fs = require('fs')
 const prettier = require('prettier')
 
 const { migrations, getCurrentVersion } = require('./migrations')
-const v1 = require('./document_v1.json')
+const prettierConfig = require('./.prettierrc.js')
+const document_v1 = require('./document_v1.json')
 
 // main
 function runMigrations(document) {
@@ -26,4 +27,4 @@ function runMigrations(document) {
   return document
 }
 
-runMigrations(v1)
+runMigrations(document_v1)
