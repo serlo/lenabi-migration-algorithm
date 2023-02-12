@@ -124,6 +124,12 @@ You can refer to
 [migrations.js](https://github.com/serlo/lenabi-migration-algorithm/blob/main/migrations.js)
 for more details on how these features are implemented.
 
+### Running tests / examples
+
+The file [`migrations.test.js`](./migrations.test.js) showcases small examples
+for the above migartions as well as how the migrations can be applied in
+sequence in two cases. You can run the tests with `yarn test`.
+
 ### Running Migrations
 
 This repo also includes a small script that executes the mutations. If you have
