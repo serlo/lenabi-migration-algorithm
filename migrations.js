@@ -52,6 +52,7 @@ const migrations = {
 function applyMigrations({ document, targetVersion = getCurrentVersion() }) {
   for (let v = document.version; v < targetVersion; v++) {
     document = migrations[v](document)
+    document.version++
   }
 
   return document

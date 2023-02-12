@@ -22,6 +22,29 @@ test('Migration from v1 to v2 adds metadata to an image', () => {
         metadata: { author: null, license: null },
       },
     },
-    version: 1,
+    version: 2,
+  })
+})
+
+test('Migration from v2 to v3 redefines multimedia plugin', () => {
+  expect(
+    applyMigrations({
+      document: {
+        type: 'https://serlo.org/editor',
+        content: {
+          plugin: 'multimedia',
+          state: { explanation: 'content 1', multimedia: 'content 2' },
+        },
+        version: 2,
+      },
+      targetVersion: 3,
+    })
+  ).toEqual({
+    type: 'https://serlo.org/editor',
+    content: {
+      plugin: 'sidebyside',
+      state: { left: 'content 1', right: 'content 2' },
+    },
+    version: 3,
   })
 })
