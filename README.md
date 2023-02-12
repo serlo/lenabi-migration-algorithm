@@ -44,8 +44,9 @@ properties:
   Editor and has a fixed string value of `"https://serlo.org/editor"`.
 - `version`: An integer, as described previously.
 - `content`: This property contains a plugin that is compatible with the Serlo
-  Editor. Each plugin has a type and a state, where the state may contain nested
-  plugins.
+  editor. Each plugin has a type and a state, where the state may contain nested
+  plugins (see
+  [description of the Serlo content format](https://github.com/serlo/documentation/wiki/Content-format)).
 
 This is a minimal example for such a document:
 
@@ -55,7 +56,7 @@ This is a minimal example for such a document:
   "version": 1,
   "content": {
     "plugin": "article",
-    "state": ...
+    "state": {}
   }
 }
 ```
@@ -69,8 +70,9 @@ version management scheme.
 
 For every version except the current one, the file
 [migrations.js](https://github.com/serlo/lenabi-migration-algorithm/blob/main/migrations.js)
-defines a function that transforms the content of a document from that version
-to the next version. The basic structure is as follows:
+defines in a registry `migrations` a function that transforms the content of a
+document from that version to the next version. The basic structure is as
+follows:
 
 ```js
 //migrations.js
@@ -86,8 +88,23 @@ const migrations = {
   },
   // ... and more migrations
 }
+```
 
-module.exports = { migrations }
+Those functions can be used to migrate a document `document` from its current
+version to `targetVersion` by appling the necessarymigrations in sequence:
+
+```js
+function applyMigrations({ document, targetVersion = getCurrentVersion() }) {
+  for (let v = document.version; v < targetVersion; v++) {
+    document = {
+      ...document,
+      content: migrations[v](document.content),
+      version: v + 1,
+    }
+  }
+
+  return document
+}
 ```
 
 This repo showcases some examples of potential migrations and their
@@ -98,10 +115,10 @@ migrations and do not represent features that are planned to be implemented):
   plugin. It is given a default value of `{author: null, license: null}` to
   indicate the absence of any special metadata.
 - `v2 -> v3`: The multimedia plugin is made more generic and renamed to
-  "sidebyside". The "illustrating" and "width" properties are removed and
-  "explanation" and "multimedia" are renamed to "left" and "right".
+  `sidebyside`. The `illustrating` and `width` properties are removed and
+  `explanation` and `multimedia` are renamed to `left` and `right`.
 - `v3 -> v4`: A new property "caption" is added to the state of the sidebyside
-  plugin. The default value of the caption is set to "".
+  plugin. The default value of the caption is set to the empty string `""`.
 
 You can refer to
 [migrations.js](https://github.com/serlo/lenabi-migration-algorithm/blob/main/migrations.js)
