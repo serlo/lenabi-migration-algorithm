@@ -1,15 +1,15 @@
-function matchPlugin(tree, type, f) {
+function matchPlugin(tree, pluginName, applyChange) {
   if (!tree) return
   if (Array.isArray(tree)) {
     tree.forEach((element) => {
-      matchPlugin(element, type, f)
+      matchPlugin(element, pluginName, applyChange)
     })
-  } else if (tree.plugin === type) {
-    f(tree)
+  } else if (tree.plugin === pluginName) {
+    applyChange(tree)
   } else if (typeof tree === 'object') {
     for (const prop in tree) {
       if (Object.hasOwn(tree, prop)) {
-        matchPlugin(tree[prop], type, f)
+        matchPlugin(tree[prop], pluginName, applyChange)
       }
     }
   }
