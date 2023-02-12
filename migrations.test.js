@@ -48,3 +48,26 @@ test('Migration from v2 to v3 redefines multimedia plugin', () => {
     version: 3,
   })
 })
+
+test('Migration from v1 to v2 adds caption to "sidebyside" plugin', () => {
+  expect(
+    applyMigrations({
+      document: {
+        type: 'https://serlo.org/editor',
+        content: {
+          plugin: 'sidebyside',
+          state: { left: 'content 1', right: 'content 2' },
+        },
+        version: 3,
+      },
+      targetVersion: 4,
+    })
+  ).toEqual({
+    type: 'https://serlo.org/editor',
+    content: {
+      plugin: 'sidebyside',
+      state: { left: 'content 1', right: 'content 2', caption: '' },
+    },
+    version: 4,
+  })
+})
