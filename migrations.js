@@ -49,8 +49,16 @@ const migrations = {
   },
 }
 
+function applyMigrations({ document, targetVersion = getCurrentVersion() }) {
+  for (let v = document.version; v < targetVersion; v++) {
+    document = migrations[v](document)
+  }
+
+  return document
+}
+
 function getCurrentVersion() {
   return Math.max(...Object.keys(migrations)) + 1
 }
 
-module.exports = { migrations, getCurrentVersion }
+module.exports = { migrations, getCurrentVersion, applyMigrations }
