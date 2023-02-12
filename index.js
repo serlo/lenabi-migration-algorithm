@@ -1,4 +1,6 @@
 const fs = require('fs')
+const prettier = require('prettier')
+const prettierConfig = require('./.prettierrc.js')
 
 const { migrations } = require('./migrations')
 const v1 = require('./document_v1.json')
@@ -18,7 +20,10 @@ function runMigrations(document) {
     document.version++
     fs.writeFileSync(
       './document_v' + document.version + '.json',
-      JSON.stringify(document, undefined, 2)
+      prettier.format(JSON.stringify(document), {
+        ...prettierConfig,
+        parser: 'json',
+      })
     )
   }
   return document
