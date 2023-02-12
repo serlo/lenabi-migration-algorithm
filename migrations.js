@@ -28,7 +28,6 @@ const migrations = {
   // Example 2: Change type of existing plugin and convert automatically
   2: (content) =>
     matchPlugin(content, 'multimedia', (plugin) => {
-      console.log(plugin)
       return {
         plugin: 'sidebyside',
         state: {

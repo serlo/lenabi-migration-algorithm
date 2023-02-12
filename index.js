@@ -1,30 +1,34 @@
 const fs = require('fs')
 const prettier = require('prettier')
 
-const { migrations, getCurrentVersion } = require('./migrations')
+const { applyMigrations, getCurrentVersion } = require('./migrations')
 const prettierConfig = require('./.prettierrc.js')
 const document_v1 = require('./document_v1.json')
 
 // main
 function runMigrations(document) {
-  while (document.version < getCurrentVersion()) {
-    document.content = migrations[document.version](document.content)
+  for (
+    let targetVersion = document.version + 1;
+    targetVersion <= getCurrentVersion();
+    targetVersion++
+  ) {
+    const newDocument = applyMigrations({ document, targetVersion })
+
     console.log(
       'Document migrated from version',
       document.version,
       'to version',
-      document.version + 1
+      newDocument.version
     )
-    document.version++
+
     fs.writeFileSync(
-      './document_v' + document.version + '.json',
-      prettier.format(JSON.stringify(document), {
+      './document_v' + targetVersion + '.json',
+      prettier.format(JSON.stringify(newDocument), {
         ...prettierConfig,
         parser: 'json',
       })
     )
   }
-  return document
 }
 
 runMigrations(document_v1)
