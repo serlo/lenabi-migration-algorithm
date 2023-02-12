@@ -152,6 +152,42 @@ You can see the result of the migrations in the files `document_v2.json` to
 `document_v4.json`. For demonstrating, the repo also contains the diffs of the
 files.
 
+## Comparision to the migration algorithm of H5P
+
+The algorithm specified in this document is compatible to the
+[migration algorithm of H5P](https://h5p.org/documentation/developers/content-upgrade).
+Also H5P uses a sequence of migrations plugins. The main difference is, that in
+H5P the version of the content matches the version of the source code itself.
+They use the major and minor version to specify each migration step in the
+registry:
+
+```js
+{
+  [majorVersion]: {
+    [minorVersion]: {
+      contentUpgrade: function (parameters, finished) {}
+    }
+  }
+}
+```
+
+Our implementation has some advantages:
+
+- H5P applies a versioning to each of its plugins while we would apply only one
+  global version number for all Serlo editor plugins. Thus we can incorporate
+  migrations where one plugin is replaced by another (for example when it is
+  completely rewritten) or when the content format totally changes (for example
+  when we change the core framework of the editor). For those use cases the H5P
+  migration algorithm cannot be used.
+- We can add multiple migration steps in one update of the editor while for H5P
+  all migrations in a version update need to be concatenated.
+- Our migration algorithm is slightly simplier to implement.
+- Our migration algorithm can be easily mapped to the H5P algorithm and thus be
+  used in case we want to export our Content in the H5P file format.
+
+In contrast in H5P it is easier to see which Plugin version is needed to render
+a certain content. However both algorithm share the same basic ideas.
+
 ## Limitations
 
 In order to ensure that the system operates smoothly, it is important to make
@@ -162,6 +198,15 @@ To minimize the risk of breaking existing documents, migrations should not be
 performed directly on the database. Instead, documents should only be updated
 after a new edit is made.
 
-The design of this system closely mirrors the
-[h5p migration](https://h5p.org/documentation/developers/content-upgrade)
-strategy, which provides a convenient framework to follow.
+A migration can also only transformation which are already stored. Take for
+example a table plugin where in a newer version an optional header got
+introduced. Here we cannot provide a general migration algorithm since we do
+cannot decide automatically whether a already defined table has a header or not.
+However we can use and combine some solutions in this case:
+
+- We can implement a good guess for the transformation (e.g if the design of the
+  first row differs from the rest then the chance is high that it is a table).
+- We can still ship the old table plugin which we only use for rendering tables
+  in the old format.
+- We can show to authors that a transformation is needed when they edit the
+  document again.
