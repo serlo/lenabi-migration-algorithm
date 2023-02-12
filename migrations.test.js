@@ -114,3 +114,35 @@ test('Migration from v1 to v4 would apply all migrations', () => {
     version: 4,
   })
 })
+
+test('Migration from v2 to v4 would apply all migrations for "sidebyside" plugin', () => {
+  expect(
+    applyMigrations({
+      document: {
+        type: 'https://serlo.org/editor',
+        content: {
+          plugin: 'article',
+          state: [
+            {
+              plugin: 'multimedia',
+              state: { explanation: 'content 1', multimedia: 'content 2' },
+            },
+          ],
+        },
+        version: 2,
+      },
+    })
+  ).toEqual({
+    type: 'https://serlo.org/editor',
+    content: {
+      plugin: 'article',
+      state: [
+        {
+          plugin: 'sidebyside',
+          state: { left: 'content 1', right: 'content 2', caption: '' },
+        },
+      ],
+    },
+    version: 4,
+  })
+})
