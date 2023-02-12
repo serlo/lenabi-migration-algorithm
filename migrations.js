@@ -49,4 +49,8 @@ const migrations = {
   },
 }
 
-module.exports = { migrations }
+function getCurrentVersion() {
+  return Math.max(...Object.keys(migrations)) + 1
+}
+
+module.exports = { migrations, getCurrentVersion }

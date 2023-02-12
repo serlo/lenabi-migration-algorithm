@@ -1,15 +1,12 @@
 const fs = require('fs')
 const prettier = require('prettier')
-const prettierConfig = require('./.prettierrc.js')
 
-const { migrations } = require('./migrations')
+const { migrations, getCurrentVersion } = require('./migrations')
 const v1 = require('./document_v1.json')
-
-const SerloEditor = { currentVersion: 4 }
 
 // main
 function runMigrations(document) {
-  while (document.version < SerloEditor.currentVersion) {
+  while (document.version < getCurrentVersion()) {
     document.content = migrations[document.version](document.content)
     console.log(
       'Document migrated from version',
