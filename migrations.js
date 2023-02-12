@@ -1,58 +1,56 @@
 function matchPlugin(tree, pluginName, applyChange) {
-  if (!tree) return
-  if (Array.isArray(tree)) {
-    tree.forEach((element) => {
-      matchPlugin(element, pluginName, applyChange)
-    })
+  if (tree == null || typeof tree !== 'object') {
+    return tree
+  } else if (Array.isArray(tree)) {
+    return tree.map((element) => matchPlugin(element, pluginName, applyChange))
   } else if (tree.plugin === pluginName) {
-    applyChange(tree)
-  } else if (typeof tree === 'object') {
-    for (const prop in tree) {
-      if (Object.hasOwn(tree, prop)) {
-        matchPlugin(tree[prop], pluginName, applyChange)
-      }
-    }
+    // For the prototype we omit the case that transformations might be also
+    // necessary to apply on nested elements
+    return applyChange(tree)
+  } else {
+    return Object.fromEntries(
+      Object.entries(tree).map(([key, value]) => [
+        key,
+        matchPlugin(value, pluginName, applyChange),
+      ])
+    )
   }
 }
 
 const migrations = {
-  1: function (content) {
-    // Example 1: Add metadata property to image
-    matchPlugin(content, 'image', (plugin) => {
-      plugin.state.metadata = {
-        author: null,
-        license: null,
-      }
-    })
-
-    return content
-  },
-  2: function (content) {
-    // Example 2: Change type of existing plugin and convert automatically
+  // Example 1: Add metadata property to image
+  1: (content) =>
+    matchPlugin(content, 'image', (plugin) => ({
+      ...plugin,
+      state: { ...plugin.state, metadata: { author: null, license: null } },
+    })),
+  // Example 2: Change type of existing plugin and convert automatically
+  2: (content) =>
     matchPlugin(content, 'multimedia', (plugin) => {
-      plugin.plugin = 'sidebyside'
-      plugin.state = {
-        left: plugin.state.explanation,
-        right: plugin.state.multimedia,
+      console.log(plugin)
+      return {
+        plugin: 'sidebyside',
+        state: {
+          left: plugin.state.explanation,
+          right: plugin.state.multimedia,
+        },
       }
-    })
-
-    return content
-  },
-  3: function (content) {
-    // Example 4: Add new property caption to sidebyside plugin
-    matchPlugin(content, 'sidebyside', (plugin) => {
-      plugin.state.caption = ''
-    })
-
-    return content
-  },
+    }),
+  // Example 4: Add new property caption to sidebyside plugin
+  3: (content) =>
+    matchPlugin(content, 'sidebyside', (plugin) => ({
+      ...plugin,
+      state: { ...plugin.state, caption: '' },
+    })),
 }
 
 function applyMigrations({ document, targetVersion = getCurrentVersion() }) {
   for (let v = document.version; v < targetVersion; v++) {
-    document.content = migrations[v](document.content)
-    document.version++
+    document = {
+      ...document,
+      content: migrations[v](document.content),
+      version: v + 1,
+    }
   }
 
   return document
@@ -62,4 +60,4 @@ function getCurrentVersion() {
   return Math.max(...Object.keys(migrations)) + 1
 }
 
-module.exports = { migrations, getCurrentVersion, applyMigrations }
+module.exports = { getCurrentVersion, applyMigrations }
