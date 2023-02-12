@@ -6,5 +6,8 @@
   "repository": "https://github.com/serlo/lenabi-migration-algorithm",
   "author": "Serlo Education e.V.",
   "license": "Apache-2.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "prettier": "^2.8.4"
+  }
 }
