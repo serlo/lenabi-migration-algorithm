@@ -132,8 +132,9 @@ sequence in two cases. You can run the tests with `yarn test`.
 
 ### Running Migrations
 
-This repo also includes a small script that executes the mutations. If you have
-node.js installed, you can run it with following command:
+This repo also includes a small script that executes the mutations on the
+document `document_v1.json`. If you have node.js installed, you can run it with
+following command (or directly with `yarn run:migrations`):
 
 ```sh
 node index.js
@@ -147,8 +148,9 @@ Document migrated from version 2 to version 3
 Document migrated from version 3 to version 4
 ```
 
-You can see the files `document_v1.json` to `document_v4.json`. For
-demonstrating, the repo also contains the diffs of the files.
+You can see the result of the migrations in the files `document_v2.json` to
+`document_v4.json`. For demonstrating, the repo also contains the diffs of the
+files.
 
 ## Limitations
 
