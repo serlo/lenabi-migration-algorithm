@@ -20,10 +20,11 @@ function matchPlugin(tree, pluginName, applyChange) {
 const migrations = {
   // Example 1: Add metadata property to image
   1: (content) =>
-    matchPlugin(content, 'image', (plugin) => ({
-      ...plugin,
-      state: { ...plugin.state, metadata: { author: null, license: null } },
-    })),
+    matchPlugin(
+      content,
+      'image',
+      updateState({ metadata: { author: null, license: null } })
+    ),
   // Example 2: Change type of existing plugin and convert automatically
   2: (content) =>
     matchPlugin(content, 'multimedia', (plugin) => {
@@ -38,10 +39,7 @@ const migrations = {
     }),
   // Example 4: Add new property caption to sidebyside plugin
   3: (content) =>
-    matchPlugin(content, 'sidebyside', (plugin) => ({
-      ...plugin,
-      state: { ...plugin.state, caption: '' },
-    })),
+    matchPlugin(content, 'sidebyside', updateState({ caption: '' })),
 }
 
 function applyMigrations({ document, targetVersion = getCurrentVersion() }) {
@@ -58,6 +56,13 @@ function applyMigrations({ document, targetVersion = getCurrentVersion() }) {
 
 function getCurrentVersion() {
   return Math.max(...Object.keys(migrations)) + 1
+}
+
+function updateState(updateOfState) {
+  return (plugin) => ({
+    ...plugin,
+    state: { ...plugin.state, ...updateOfState },
+  })
 }
 
 module.exports = { getCurrentVersion, applyMigrations }
