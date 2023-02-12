@@ -1,6 +1,6 @@
 const { applyMigrations } = require('./migrations')
 
-test('Migration from v1 to v2 adds metadata to an image', () => {
+test('Migration from v1 to v2 adds metadata to the "image" plugin', () => {
   expect(
     applyMigrations({
       document: {
@@ -26,7 +26,7 @@ test('Migration from v1 to v2 adds metadata to an image', () => {
   })
 })
 
-test('Migration from v2 to v3 redefines multimedia plugin', () => {
+test('Migration from v2 to v3 redefines "multimedia" plugin into "sidebyside" plugin', () => {
   expect(
     applyMigrations({
       document: {
