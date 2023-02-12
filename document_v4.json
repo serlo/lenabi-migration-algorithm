@@ -122,9 +122,9 @@
                   },
                   "metadata": { "author": null, "license": null }
                 }
-              }
-            },
-            "caption": ""
+              },
+              "caption": ""
+            }
           },
           {
             "plugin": "sidebyside",
@@ -176,9 +176,9 @@
                   },
                   "metadata": { "author": null, "license": null }
                 }
-              }
-            },
-            "caption": ""
+              },
+              "caption": ""
+            }
           },
           {
             "plugin": "rows",
@@ -224,9 +224,9 @@
                       },
                       "metadata": { "author": null, "license": null }
                     }
-                  }
-                },
-                "caption": ""
+                  },
+                  "caption": ""
+                }
               },
               {
                 "plugin": "sidebyside",
@@ -281,9 +281,9 @@
                       },
                       "metadata": { "author": null, "license": null }
                     }
-                  }
-                },
-                "caption": ""
+                  },
+                  "caption": ""
+                }
               },
               {
                 "plugin": "sidebyside",
@@ -330,9 +330,9 @@
                       },
                       "metadata": { "author": null, "license": null }
                     }
-                  }
-                },
-                "caption": ""
+                  },
+                  "caption": ""
+                }
               }
             ]
           },

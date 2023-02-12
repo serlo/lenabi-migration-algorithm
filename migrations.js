@@ -42,7 +42,7 @@ const migrations = {
   3: function (content) {
     // Example 4: Add new property caption to sidebyside plugin
     matchPlugin(content, 'sidebyside', (plugin) => {
-      plugin.caption = ''
+      plugin.state.caption = ''
     })
 
     return content
