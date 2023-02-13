@@ -184,9 +184,9 @@
                     "license": null
                   }
                 }
-              }
-            },
-            "caption": ""
+              },
+              "caption": ""
+            }
           },
           {
             "plugin": "sidebyside",
@@ -269,9 +269,9 @@
                     "license": null
                   }
                 }
-              }
-            },
-            "caption": ""
+              },
+              "caption": ""
+            }
           },
           {
             "plugin": "rows",
@@ -331,9 +331,9 @@
                         "license": null
                       }
                     }
-                  }
-                },
-                "caption": ""
+                  },
+                  "caption": ""
+                }
               },
               {
                 "plugin": "sidebyside",
@@ -415,9 +415,9 @@
                         "license": null
                       }
                     }
-                  }
-                },
-                "caption": ""
+                  },
+                  "caption": ""
+                }
               },
               {
                 "plugin": "sidebyside",
@@ -489,9 +489,9 @@
                         "license": null
                       }
                     }
-                  }
-                },
-                "caption": ""
+                  },
+                  "caption": ""
+                }
               }
             ]
           },

@@ -1,52 +1,67 @@
-function matchPlugin(tree, type, f) {
-  if (!tree) return
-  if (Array.isArray(tree)) {
-    tree.forEach((element) => {
-      matchPlugin(element, type, f)
-    })
-  } else if (tree.plugin === type) {
-    f(tree)
-  } else if (typeof tree === 'object') {
-    for (const prop in tree) {
-      if (Object.hasOwn(tree, prop)) {
-        matchPlugin(tree[prop], type, f)
+const migrations = {
+  // Example 1: Add metadata property to image
+  1: (content) =>
+    matchPlugin(
+      content,
+      'image',
+      updateState({ metadata: { author: null, license: null } })
+    ),
+  // Example 2: Change type of existing plugin and convert automatically
+  2: (content) =>
+    matchPlugin(content, 'multimedia', (plugin) => {
+      return {
+        plugin: 'sidebyside',
+        state: {
+          left: plugin.state.explanation,
+          right: plugin.state.multimedia,
+        },
       }
+    }),
+  // Example 4: Add new property caption to sidebyside plugin
+  3: (content) =>
+    matchPlugin(content, 'sidebyside', updateState({ caption: '' })),
+}
+
+function applyMigrations({ document, targetVersion = getCurrentVersion() }) {
+  for (let v = document.version; v < targetVersion; v++) {
+    document = {
+      ...document,
+      content: migrations[v](document.content),
+      version: v + 1,
     }
+  }
+
+  return document
+}
+
+function matchPlugin(tree, pluginName, applyChange) {
+  if (tree == null || typeof tree !== 'object') {
+    return tree
+  } else if (Array.isArray(tree)) {
+    return tree.map((element) => matchPlugin(element, pluginName, applyChange))
+  } else if (tree.plugin === pluginName) {
+    // For the prototype we omit the case that transformations might be also
+    // necessary to apply on nested elements
+    return applyChange(tree)
+  } else {
+    return Object.fromEntries(
+      Object.entries(tree).map(([key, value]) => [
+        key,
+        matchPlugin(value, pluginName, applyChange),
+      ])
+    )
   }
 }
 
-const migrations = {
-  1: function (content) {
-    // Example 1: Add metadata property to image
-    matchPlugin(content, 'image', (plugin) => {
-      plugin.state.metadata = {
-        author: null,
-        license: null,
-      }
-    })
-
-    return content
-  },
-  2: function (content) {
-    // Example 2: Change type of existing plugin and convert automatically
-    matchPlugin(content, 'multimedia', (plugin) => {
-      plugin.plugin = 'sidebyside'
-      plugin.state = {
-        left: plugin.state.explanation,
-        right: plugin.state.multimedia,
-      }
-    })
-
-    return content
-  },
-  3: function (content) {
-    // Example 4: Add new property caption to sidebyside plugin
-    matchPlugin(content, 'sidebyside', (plugin) => {
-      plugin.caption = ''
-    })
-
-    return content
-  },
+function getCurrentVersion() {
+  return Math.max(...Object.keys(migrations)) + 1
 }
 
-module.exports = { migrations }
+function updateState(updateOfState) {
+  return (plugin) => ({
+    ...plugin,
+    state: { ...plugin.state, ...updateOfState },
+  })
+}
+
+module.exports = { getCurrentVersion, applyMigrations }
