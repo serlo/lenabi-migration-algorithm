@@ -205,3 +205,21 @@ However we can use and combine some solutions in this case:
   in the old format.
 - We can show to authors that a transformation is needed when they edit the
   document again.
+
+## License
+
+<img src="https://github.com/serlo/lenabi-migration-algorithm/raw/main/assets/cc-by-sa.svg" alt="Logo CC-BY-SA 4.0 license" title="CC-BY-SA 4.0" align="right" width="150" />
+
+This specification is licensed under the
+[CC-BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/). Please
+provide [Serlo Education e.V.](https://serlo.org) together with the link to this
+repository as the source attribution.
+
+## Förderung
+
+<img src="https://github.com/serlo/lenabi-migration-algorithm/raw/main/assets/bmbf.png" alt="Logo BMBF" title="BMBF" align="right" width="150" />
+
+Das diesem Bericht zugrunde liegende Vorhaben wurde mit Mitteln des
+Bundesministeriums für Bildung und Forschung unter dem Förderkennzeichen LENABI2
+gefördert. Die Verantwortung für den Inhalt dieser Veröffentlichung liegt bei
+der Autorin/beim Autor.
