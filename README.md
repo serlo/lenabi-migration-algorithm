@@ -215,11 +215,10 @@ This specification is licensed under the
 provide [Serlo Education e.V.](https://serlo.org) together with the link to this
 repository as the source attribution.
 
-## Förderung
+## Funding
 
 <img src="https://github.com/serlo/lenabi-migration-algorithm/raw/main/assets/bmbf.png" alt="Logo BMBF" title="BMBF" align="right" width="150" />
 
-Das diesem Bericht zugrunde liegende Vorhaben wurde mit Mitteln des
-Bundesministeriums für Bildung und Forschung unter dem Förderkennzeichen LENABI2
-gefördert. Die Verantwortung für den Inhalt dieser Veröffentlichung liegt bei
-der Autorin/beim Autor.
+The project on which this report is based was funded by the Federal Ministry of
+Education and Research (BMBF) under the funding code LENABI2. The author is
+responsible for the content of this publication.
