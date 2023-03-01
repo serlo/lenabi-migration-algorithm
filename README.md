@@ -1,10 +1,5 @@
 # Migration Algorithm for Serlo Editor Document Format
 
-_M.2.2. Ein Migrationsalgorithmus für das Speicher- und Austauschformat ist
-implementiert. (Dieser ermöglicht, dass parallel neue Lerninhalte für den Editor
-entwickelt werden können und Lerninhalte im Speicher- und Austauschformat
-standardisiert werden können.)_
-
 ## Introduction
 
 No software is set in stone, and there will always be a need to add or change
@@ -149,8 +144,8 @@ Document migrated from version 3 to version 4
 ```
 
 You can see the result of the migrations in the files `document_v2.json` to
-`document_v4.json`. For demonstrating, the repository also contains the diffs of the
-files.
+`document_v4.json`. For demonstrating, the repository also contains the diffs of
+the files.
 
 ## Comparison to the migration algorithm of H5P
 
