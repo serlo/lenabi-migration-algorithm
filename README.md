@@ -219,6 +219,7 @@ repository as the source attribution.
 
 <img src="https://github.com/serlo/lenabi-migration-algorithm/raw/main/assets/bmbf.png" alt="Logo BMBF" title="BMBF" align="right" width="150" />
 
-The project on which this report is based was funded by the Federal Ministry of
-Education and Research (BMBF) under the funding code LENABI2. The author is
-responsible for the content of this publication.
+The project covered by this report has been financed by public means granted by
+the German Ministry for Education and Research under the funding code LENABI2.
+The responsibility for the content of this publication lies solely with the
+author.
