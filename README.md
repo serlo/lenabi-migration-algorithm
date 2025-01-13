@@ -1,3 +1,5 @@
+<img src="https://github.com/serlo/lenabi-migration-algorithm/blob/main/assets/serlo.svg?raw=true" alt="Serlo Logo" title="Serlo" align="right" height="75" />
+
 # Migration Algorithm for Serlo Editor Document Format
 
 ## Introduction
@@ -217,7 +219,8 @@ repository as the source attribution.
 
 ## Funding
 
-<img src="https://github.com/serlo/lenabi-migration-algorithm/raw/main/assets/bmbf.png" alt="Logo BMBF" title="BMBF" align="right" width="150" />
+<img src="https://github.com/serlo/lenabi-migration-algorithm/blob/main/assets/eu.png?raw=true" alt="Logo European Commission" title="European Comission" align="right" height="150" />
+<img src="https://github.com/serlo/lenabi-migration-algorithm/blob/main/assets/bmbf.png?raw=true" alt="Logo BMBF" title="BMBF" align="right" height="150" />
 
 The project covered by this report has been financed by public means granted by
 the German Ministry for Education and Research under the funding code LENABI2.
